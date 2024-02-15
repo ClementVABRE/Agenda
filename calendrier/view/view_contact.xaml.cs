@@ -47,5 +47,22 @@ namespace calendrier.view
 
             Ecran_Contact.Children.Add(dashboardView);
         }
+
+        private void BTN_Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Window.GetWindow(this).Close();
+
+
+        }
+
+        private void BTN_Calendrier_Click(object sender, RoutedEventArgs e)
+        {
+            var calendrierview = new view_calendrier(); // Assurez-vous de remplacer DashboardView par le nom de votre classe de vue du tableau de bord
+            Ecran_Contact.Children.Clear(); // Efface tout contenu existant dans la grille
+            Grid.SetColumnSpan(calendrierview, 2);
+            Ecran_Contact.Children.Add(calendrierview);
+        }
     }
     }

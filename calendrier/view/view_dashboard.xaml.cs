@@ -44,5 +44,13 @@ namespace calendrier.view
             Ecran_Principale.Children.Add(calendrierview);
 
         }
+
+        private void BTN_Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Window.GetWindow(this).Close();
+
+        }
     }
 }

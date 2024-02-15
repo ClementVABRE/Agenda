@@ -76,7 +76,7 @@
         </Style>
 
     </UserControl.Resources>
-    <Grid x:Name="Ecran_Principale">
+    <Grid x:Name="Ecran_Principale" >
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -96,7 +96,7 @@
                     
                     <Separator Background="{StaticResource DividerColor}" Margin="0,10"/>
                     
-                    <Button Content="Logout" Style="{StaticResource MenuButtonStyle}"/>
+                    <Button Content="Logout" Style="{StaticResource MenuButtonStyle}" Click="BTN_Logout_Click"/>
 
                 </StackPanel>
             </Border>

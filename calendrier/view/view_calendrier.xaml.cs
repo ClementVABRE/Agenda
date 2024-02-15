@@ -28,10 +28,47 @@ namespace calendrier.view
         }
         private void WebBrowser_Navigating(object sender, NavigatingCancelEventArgs e)
         {
-            // Inspectez le contenu de la page ici
-            // Vous pouvez rechercher des erreurs de script ou d'autres problèmes
-            // Par exemple, vous pouvez utiliser JavaScript pour inspecter la page
+       
+          
         }
 
+        private void BTN_Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Window.GetWindow(this).Close();
+
+        }
+
+        private void BTN_Calendrier_Click(object sender, RoutedEventArgs e)
+        {
+            var calendrierview = new view_calendrier(); // Assurez-vous de remplacer DashboardView par le nom de votre classe de vue du tableau de bord
+            Ecran_Calendar.Children.Clear(); // Efface tout contenu existant dans la grille
+            Grid.SetColumnSpan(calendrierview, 2);
+            Ecran_Calendar.Children.Add(calendrierview);
+        }
+
+     
+
+        private void BTN_Dashboard_Click(object sender, RoutedEventArgs e)
+        {
+            var dashboardView = new view_dashboard(); // Assurez-vous de remplacer DashboardView par le nom de votre classe de vue du tableau de bord
+
+            // Remplace le contenu des deux parties de la grille
+            Ecran_Calendar.Children.Clear(); // Efface tout contenu existant dans la grille
+            Grid.SetColumnSpan(dashboardView, 2);
+            Ecran_Calendar.Children.Add(dashboardView);
+        }
+
+        private void BTN_Contact_Click(object sender, RoutedEventArgs e)
+        {
+            var contactview = new view_contact(); // Assurez-vous de remplacer DashboardView par le nom de votre classe de vue du tableau de bord
+
+            // Remplace le contenu des deux parties de la grille
+            Ecran_Calendar.Children.Clear(); // Efface tout contenu existant dans la grille
+            Grid.SetColumnSpan(contactview, 2);
+            Ecran_Calendar.Children.Add(contactview);
+           
+        }
     }
 }

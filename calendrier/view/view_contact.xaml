@@ -93,11 +93,11 @@
                     <Separator Background="{StaticResource DividerColor}"/>
                     <Button Content="Dashboard" Style="{StaticResource MenuButtonStyle}" Click="BTN_Dashboard_Click"/>
                     <Button Content="Contacts" Style="{StaticResource MenuButtonStyle}" />
-                    <Button Content="Calendrier" Style="{StaticResource MenuButtonStyle}"/>
+                    <Button Content="Calendrier" Style="{StaticResource MenuButtonStyle}" Click="BTN_Calendrier_Click"/>
 
                     <Separator Background="{StaticResource DividerColor}" Margin="0,10"/>
 
-                    <Button Content="Logout" Style="{StaticResource MenuButtonStyle}"/>
+                    <Button Content="Logout" Style="{StaticResource MenuButtonStyle}" Click="BTN_Logout_Click"/>
 
                 </StackPanel>
             </Border>
