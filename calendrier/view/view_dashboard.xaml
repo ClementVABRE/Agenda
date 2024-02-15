@@ -7,6 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
+
+        <!-- Dégradé de couleur -->
+        <LinearGradientBrush x:Key="BackgroundGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#8853B5" Offset="0"/>
+            <GradientStop Color="#5584AC" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <!-- Couleurs et styles -->
         <SolidColorBrush x:Key="PrimaryColor" Color="#673AB7"/>
         <SolidColorBrush x:Key="AccentColor" Color="#FF4081"/>
         <SolidColorBrush x:Key="TextColor" Color="#333"/>
@@ -77,7 +85,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Sidebar -->
-            <Border Background="{StaticResource PrimaryColor}" Grid.Column="0">
+            <Border Background="{StaticResource BackgroundGradient}" Grid.Column="0">
                 <StackPanel>
                     <TextBlock Text="Clément Vabre" FontSize="24" Padding="20" Foreground="{StaticResource IconColor}"/>
                     <TextBlock Text="Members, Annecy" Padding="20,0,20,20" Foreground="{StaticResource IconColor}"/>
